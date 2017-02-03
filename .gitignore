@@ -1,2 +1,6 @@
+#intelliJ
 .idea/
 *.iml
+
+#target
+*/target/*
