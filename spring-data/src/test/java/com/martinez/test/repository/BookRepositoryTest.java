@@ -13,8 +13,7 @@ public class BookRepositoryTest extends PersistenceContextTest {
     @Test
     public void count() {
         long booksCount = bookRepository.count();
-        System.out.println(booksCount);
-        Assert.assertTrue(booksCount >= 0);
+        Assert.assertTrue(booksCount > 0);
     }
 
     @Test
