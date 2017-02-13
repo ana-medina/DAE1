@@ -2,5 +2,11 @@
 .idea/
 *.iml
 
+#STS
+.project
+*/.classpath
+*/.gitignore
+*/.settings
+
 #target
 */target/*
