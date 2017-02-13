@@ -11,9 +11,9 @@
     
     <modules>
         <module>data-model</module>
-        <module>spring-dao</module>
+        <module>spring-data</module>
         <module>spring-services</module>
-        <module>spring-mvc</module>
+        <module>spring-web</module>
     </modules>
 
     <dependencies>
