@@ -12,7 +12,7 @@
     <modules>
         <module>data-model</module>
         <module>spring-data</module>
-        <module>spring-services</module>
+        <module>spring-service</module>
         <module>spring-web</module>
     </modules>
 
