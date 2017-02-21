@@ -23,12 +23,13 @@ import nz.net.ultraq.thymeleaf.decorators.strategies.GroupingStrategy;
 @Configuration
 @ComponentScan(basePackages = {"com.martinez.web.controller"})
 public class SpringWebContext extends WebMvcConfigurerAdapter implements ApplicationContextAware {
+
     private ApplicationContext applicationContext;
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/static/**").addResourceLocations("/static/");
-        registry.addResourceHandler("/webjars/**").addResourceLocations("/webjars");
+        registry.addResourceHandler("/webjars/**").addResourceLocations("/webjars/");
     }
 
     /**
