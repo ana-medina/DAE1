@@ -13,4 +13,7 @@ public interface BookRepository extends JpaRepository<Book, String>, CrudReposit
 
     Book findByIsbn(String isbn);
 
+    //@Query("DELETE FROM Book b WHERE b.isbn = :isbn")
+    //public void deleteBook(String isbn);
+
 }
