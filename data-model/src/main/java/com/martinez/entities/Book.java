@@ -8,6 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -21,8 +22,12 @@ import java.util.Set;
 
 @Entity
 @Table(name = "books")
-@NamedQuery(name = "Book.findByTitle",
-    query = "SELECT b FROM Book b WHERE b.title = ?1")
+@NamedQueries({
+    @NamedQuery(name = "Book.findByTitle",
+        query = "SELECT b FROM Book b WHERE b.title = ?1"),
+    @NamedQuery(name = "Book.findByIsbn",
+        query = "SELECT b FROM Book b WHERE b.isbn = ?1")
+})
 public class Book implements Serializable {
 
     @Id
