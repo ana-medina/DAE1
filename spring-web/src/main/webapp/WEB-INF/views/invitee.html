@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <title>Spring Framework Guru</title>
+</head>
+<body>
+    <div class="container">
+        <div th:if="${not #lists.isEmpty(invitees)}">
+            <h2>Invitees</h2>
+            <td><a th:href="${'/spring4-v1'}">Home</a></td>
+            <td><a th:href="${'invitee/new'}">New Invitee</a></td>
+            <table class="table table-striped">
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                </tr>
+                <tr th:each="invitee : ${invitees}">
+                    <td th:text="${invitee.id}"><a href="/invitee/${invitee.id}">Id</a></td>
+                    <td th:text="${invitee.title}">Title</td>
+                    <td><a th:href="${'invitee/' + invitee.id}">View</a></td>
+                    <td><a th:href="${'invitee/edit/' + invitee.id}">Edit</a></td>
+                    <td><a th:href="${'invitee/delete/' + invitee.id}">Delete</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

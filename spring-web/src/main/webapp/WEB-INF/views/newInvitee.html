@@ -5,13 +5,13 @@
 </head>
 <body>
 <div class="container">
-    <h2>Book Details</h2>
+    <h2>Invitee Details</h2>
     <div>
-        <form class="form-horizontal" th:object="${book}" th:action="@{/book}" method="post">
+        <form class="form-horizontal" th:object="${invitee}" th:action="@{/invitee}" method="post">
             <div class="form-group">
-                <label class="col-sm-2 control-label">Isbn:</label>
+                <label class="col-sm-2 control-label">Id:</label>
                 <div class="col-sm-10">
-                    <input type="text" readonly class="form-control" th:field="*{isbn}"/>
+                    <input type="text" class="form-control" th:field="*{id}"/>
                 </div>
             </div>
             <div class="form-group">
@@ -24,7 +24,7 @@
                 <button type="submit" class="btn btn-default">Submit</button>
             </div>
         </form>
-        <td><a th:href="${'/spring4-v1/books'}">Books</a></td>
+        <td><a th:href="${'/spring4-v1/invitees'}">Invitees</a></td>
     </div>
 </div>
 
