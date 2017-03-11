@@ -15,7 +15,7 @@ import java.util.Date;
 @Table(name = "Invitee")
 @NamedQueries({
     @NamedQuery(name = "Invitee.findByName",
-        query = "SELECT b FROM Invitee b WHERE b.name = ?1"),
+        query = "SELECT b FROM Invitee b WHERE b.inviteeName = ?1"),
     @NamedQuery(name = "Invitee.findById",
         query = "SELECT b FROM Invitee b WHERE b.idInvitee = ?1")
 })

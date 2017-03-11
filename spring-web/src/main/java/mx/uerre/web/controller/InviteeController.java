@@ -1,7 +1,6 @@
 package mx.uerre.web.controller;
 
 import mx.uerre.entities.Invitee;
-import mx.uerre.entities.Invitee;
 import mx.uerre.service.InviteeService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +18,7 @@ public class InviteeController {
     private InviteeService inviteeService;
 
     @GetMapping
-    @RequestMapping(value = {"/invitee"})
+    @RequestMapping(value = {"/invitees"})
     public String allInvitees(Model model) {
         model.addAttribute("invitee", inviteeService.findAll());
         return "invitee";
