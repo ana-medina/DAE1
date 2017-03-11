@@ -12,11 +12,11 @@
             <table class="table table-striped">
                 <tr>
                     <th>Id</th>
-                    <th>Title</th>
+                    <th>Email</th>
                 </tr>
                 <tr th:each="invitee : ${invitees}">
                     <td th:text="${invitee.id}"><a href="/invitee/${invitee.id}">Id</a></td>
-                    <td th:text="${invitee.title}">Title</td>
+                    <td th:text="${invitee.email}">Email</td>
                     <td><a th:href="${'invitee/' + invitee.id}">View</a></td>
                     <td><a th:href="${'invitee/edit/' + invitee.id}">Edit</a></td>
                     <td><a th:href="${'invitee/delete/' + invitee.id}">Delete</a></td>
