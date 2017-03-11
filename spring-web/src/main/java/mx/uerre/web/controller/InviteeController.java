@@ -27,7 +27,7 @@ public class InviteeController {
     @GetMapping
     @RequestMapping(value = {"/invitee/new"})
     public String newInvitee(Model model) {
-        model.addAttribute("invitee", new Invitee());///checar
+        model.addAttribute("invitee", new Invitee());
         return "newInvitee";
     }
 
@@ -47,7 +47,7 @@ public class InviteeController {
 
     @PostMapping
     @RequestMapping(value = {"/invitee"})
-    public String saveInvitee(Invitee invitee) ///checar
+    public String saveInvitee(Invitee invitee)
 
     {
         inviteeService.saveInvitee(invitee);
