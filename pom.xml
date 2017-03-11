@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.martinez</groupId>
-    <artifactId>app-spring-fundamentals</artifactId>
+    <groupId>mx.uerre</groupId>
+    <artifactId>DAE1</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     
@@ -51,22 +51,22 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.martinez</groupId>
+                <groupId>mx.uerre</groupId>
                 <artifactId>data-model</artifactId>
                 <version>1.0-SNAPSHOT</version>
             </dependency>
             <dependency>
-                <groupId>com.martinez</groupId>
+                <groupId>mx.uerre</groupId>
                 <artifactId>spring-data</artifactId>
                 <version>1.0-SNAPSHOT</version>
             </dependency>
             <dependency>
-                <groupId>com.martinez</groupId>
+                <groupId>mx.uerre</groupId>
                 <artifactId>spring-service</artifactId>
                 <version>1.0-SNAPSHOT</version>
             </dependency>
             <dependency>
-                <groupId>com.martinez</groupId>
+                <groupId>mx.uerre</groupId>
                 <artifactId>spring-web</artifactId>
                 <version>1.0-SNAPSHOT</version>
             </dependency>
