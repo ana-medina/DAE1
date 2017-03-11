@@ -14,7 +14,7 @@ public interface InviteeRepository extends JpaRepository<Invitee, Integer>, Crud
 
     Invitee findById(Integer id);
 
-    //@Query("DELETE FROM Invitee b WHERE b.id = :")
+    //@Query("DELETE FROM Invitee b WHERE b.idInvitee = :")
     //public void deleteInvitee(Integer id);
 
 }

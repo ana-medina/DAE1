@@ -19,7 +19,7 @@ public class InviteeController {
 
     @GetMapping
     @RequestMapping(value = {"/invitees"})
-    public String allInvitees(Model model) {
+    public String allInvitee(Model model) {
         model.addAttribute("invitee", inviteeService.findAll());
         return "invitee";
     }
@@ -51,7 +51,7 @@ public class InviteeController {
 
     {
         inviteeService.saveInvitee(invitee);
-        return "redirect:/invitee/" + invitee.getIdInvitees();
+        return "redirect:/invitee/" + invitee.getIdInvitee();
     }
 
     @RequestMapping(value = {"/Invitee/delete/{id}"})

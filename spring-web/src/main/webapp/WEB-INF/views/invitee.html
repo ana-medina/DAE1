@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head lang="en">
-    <title>Spring Framework Guru</title>
+    <title>DAE1-CED</title>
 </head>
 <body>
     <div class="container">
-        <div th:if="${not #lists.isEmpty(invitees)}">
-            <h2>Invitees</h2>
+        <div th:if="${not #lists.isEmpty(invitee)}">
+            <h2>Invitee</h2>
             <td><a th:href="${'/spring4-v1'}">Home</a></td>
             <td><a th:href="${'invitee/new'}">New Invitee</a></td>
             <table class="table table-striped">
@@ -14,7 +14,7 @@
                     <th>Id</th>
                     <th>Email</th>
                 </tr>
-                <tr th:each="invitee : ${invitees}">
+                <tr th:each="invitee : ${invitee}">
                     <td th:text="${invitee.id}"><a href="/invitee/${invitee.id}">Id</a></td>
                     <td th:text="${invitee.email}">Email</td>
                     <td><a th:href="${'invitee/' + invitee.id}">View</a></td>

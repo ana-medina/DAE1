@@ -6,10 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import java.io.Serializable;
-import java.util.Date;
 
 @Entity
 @Table(name = "Invitee")
@@ -40,12 +37,12 @@ public class Invitee implements Serializable {
     public Invitee() {
     }
 
-    public Integer getIdInvitees() {
+    public Integer getIdInvitee() {
         return idInvitee;
     }
 
-    public void setIdInvitees(Integer idInvitees) {
-        this.idInvitee = idInvitees;
+    public void setIdInvitee(Integer idInvitee) {
+        this.idInvitee = idInvitee;
     }
 
     public String getInviteeName() {
