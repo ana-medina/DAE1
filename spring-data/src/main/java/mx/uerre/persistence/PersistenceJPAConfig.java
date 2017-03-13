@@ -78,7 +78,7 @@ public class PersistenceJPAConfig {
         create-drop: create the schema as in create above, but also drop the schema at the end of the session.
             This is great in early development or for testing.
          */
-        properties.setProperty("hibernate.hbm2ddl.auto", "create");
+        properties.setProperty("hibernate.hbm2ddl.auto", "validate");
         properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
         return properties;
     }
