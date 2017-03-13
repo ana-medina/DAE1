@@ -57,6 +57,6 @@ public class InviteeController {
     @RequestMapping(value = {"/invitee/delete/{id}"})
     public String delete(@PathVariable Integer id) {
         inviteeService.deleteInvitee(id);
-        return "redirect:/invitee";
+        return "redirect:/invitees";
     }
 }
