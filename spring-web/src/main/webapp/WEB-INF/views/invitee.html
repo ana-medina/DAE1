@@ -4,25 +4,33 @@
     <title>DAE1-CED</title>
 </head>
 <body>
-    <div class="container">
-        <div th:if="${not #lists.isEmpty(invitee)}">
-            <h2>Invitee List</h2>
-            <td><a th:href="${'/spring4-v1'}">Home</a></td>
-            <td><a th:href="${'invitee/new'}">New Invitee</a></td>
-            <table class="table table-striped">
-                <tr>
-                    <th>Names</th>
-                    <th>Actions</th>
-                </tr>
-                <tr th:each="invitee : ${invitee}">
-                    <td th:text="${invitee.inviteeName}"><a href="/invitee/${invitee.inviteeName}">Id</a></td>
+<div class="container">
+    <div th:if="${not #lists.isEmpty(invitee)}">
+        <h2>Invitee List</h2>
+        <td><a th:href="${'/spring4-v1'}">Home</a></td>
+        <td><a th:href="${'invitee/new'}">New Invitee</a></td>
+        <table class="table table-striped">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Gender</th>
+                <th>Age</th>
+            </tr>
+            <tr th:each="invitee : ${invitee}">
+                <td th:text="${invitee.idInvitee}"><a href="/invitee/${invitee.idInvitee}">Id</a></td>
+                <td th:text="${invitee.inviteeName}">Name</td>
+                <td th:text="${invitee.inviteePhone}">Phone</td>
+                <td th:text="${invitee.inviteeGender}">Gender</td>
+                <td th:text="${invitee.inviteeAge}">Age</td>
 
-                    <td><a th:href="${'invitee/' + invitee.inviteeName}">View</a></td>
-                    <td><a th:href="${'invitee/edit/' + invitee.inviteeName}">Edit</a></td>
-                    <td><a th:href="${'invitee/delete/' + invitee.inviteeName}">Delete</a></td>
-                </tr>
-            </table>
-        </div>
+                <td><a th:href="${'invitee/' + invitee.idInvitee}">View</a></td>
+                <td><a th:href="${'invitee/edit/' + invitee.idInvitee}">Edit</a></td>
+                <td><a th:href="${'invitee/delete/' + invitee.idInvitee}">Delete</a></td>
+            </tr>
+        </table>
     </div>
+</div>
 </body>
 </html>
+

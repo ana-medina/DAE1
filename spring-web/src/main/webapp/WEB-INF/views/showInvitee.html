@@ -11,17 +11,35 @@
             <div class="form-group">
                 <label class="col-sm-2 control-label">Id:</label>
                 <div class="col-sm-10">
-                    <p class="form-control-static" th:text="${invitee.id}">Id</p>
+                    <p class="form-control-static" th:text="${invitee.idInvitee}">Id</p>
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">Email:</label>
+                <label class="col-sm-2 control-label">Name:</label>
                 <div class="col-sm-10">
-                    <p class="form-control-static" th:text="${invitee.email}">Email</p>
+                    <p class="form-control-static" th:text="${invitee.inviteeName}">Name</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Phone:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${invitee.inviteePhone}">Phone</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Gender:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${invitee.inviteeGender}">Gender</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Age:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${invitee.inviteeAge}">Age</p>
                 </div>
             </div>
         </form>
-        <td><a th:href="${'/spring4-v1/invitee'}">Invitee</a></td>
+        <td><a th:href="${'/spring4-v1/invitees'}">Invitees</a></td>
     </div>
 </div>
 </body>
